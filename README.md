@@ -1,14 +1,10 @@
 # Introduction [Early draft]
 
-This is a quality of life improvement idea for passwordmanagers and websites.
-The idea is to have a standard for passwordmanagers to automatically change passwords for accounts on websites.
-It consists of a manifest file hosted by websites with user accounts who want to support this feature.
-The Manifest file contains information on how to change the password for the account and how to delete the account.
-Also instructions for automatic requests from passwordmanagers are included.
-The passwordmanager can then use this information to automatically change the password for the account or delete the account.
-Or at least prepare everything for the user to do it with just a few clicks.
+This suggestion aims to enhance the quality of life regarding password managers and websites. The proposal suggests establishing a standardized process for password managers to automatically update passwords for accounts on various websites. This involves the creation of a manifest file, which is hosted by websites whose user accounts wish to support this functionality.
 
-I got the idea at night and it might even already exist somewhere.
+Within the manifest file, crucial information is provided, including instructions on changing the account password and deleting the account. Additionally, the file contains guidelines for facilitating automatic requests from password managers. By utilizing this information, password managers can seamlessly execute tasks such as password updates or account deletions automatically. Alternatively, the system can be designed to streamline the process for users, requiring only a few clicks to complete the necessary actions.
+
+This idea occurred to me during the night, and there is a possibility that a similar concept may already exist somewhere.
 
 ## Use cases
 
@@ -76,9 +72,7 @@ I got the idea at night and it might even already exist somewhere.
 
 ## Interactivity
 
-Interactivity is a way to interact with the user during the process.
-This could be a captcha, a security question or a 2FA code.
-The passwordmanager should display a dialog to the user to enter the information.
+The interactive aspect of the process is facilitated through the interactivity section of the manifest file. This can encompass elements such as a captcha, a security question, or a 2FA code. The password manager is expected to present a user-friendly dialog prompting the user to input the required information. This ensures an additional layer of security and user verification during the process.
 
 ### Interactivity types
 
@@ -93,23 +87,20 @@ The passwordmanager should display a dialog to the user to enter the information
 
 ### Interactivity callback
 
-The interactivity callback is a way for the website to notify the passwordmanager that the interactivity is done.
-This could be a periodic request or a long polling request.
-The passwordmanager should display a dialog to the user to wait for the interactivity to be done.
-This can also be a toast notification or something similar.
+The interactivity callback serves as a means for the website to signal the password manager that the interactive phase has concluded. This callback mechanism could take the form of a periodic request or a long polling request. To keep users informed, the password manager is responsible for displaying a dialog, prompting them to wait for the completion of the interactivity process. Additionally, alternative options such as a toast notification or a similar notification mechanism can be employed for a seamless user experience.
 
 ### Interactivity failure
 
-The interactivity failure is a way for the website to notify the passwordmanager that the interactivity failed.
-This could be a captcha that was entered wrong or a security question that was answered wrong.
-The passwordmanager should display a dialog to the user to notify them that the interactivity failed.
-This can also be a toast notification or something similar.
+The interactivity failure serves as a method for the website to inform the password manager that the interactive process encountered an issue.
+This could result from an incorrectly entered captcha or an inaccurate response to a security question.
+In response, the password manager should display a user-friendly dialog to notify them about the interactivity failure.
+Additionally, alternative communication methods, such as a toast notification or a similar interface element, can be employed for effectively conveying this information to the user.
 
 ### Interactivity restart
 
-The interactivity restart is a way for the website to notify the passwordmanager that the interactivity failed and should be restarted.
-It tells the passwordmanager what to restart.
-This could be the whole process or just the interactivity part.
+The interactivity restart function enables the website to communicate to the password manager that the previous interactivity attempt failed and needs to be restarted.
+This notification includes instructions on what specific aspect of the process requires a restart, whether it be the entire process or just the interactivity segment.
+By providing this information, the password manager can implement the necessary actions to restart the indicated components, ensuring a smoother and more resilient interactive experience for the user.
 
 ## Actions
 
